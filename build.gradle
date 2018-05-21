@@ -22,14 +22,11 @@ buildscript {
             url uri('D:/repos')
         }
         maven{
-            url 'http://200.200.200.40:8083/nexus/content/repositories/clife-android-snapshots/'
         }
     }
     dependencies {
         classpath "com.android.tools.build:gradle:2.3.3"
         classpath 'org.codehaus.groovy:gradle-groovy-android-plugin:0.3.6'
-        classpath 'com.github.sleep.dolphin:build-gradle:1.0.2-SNAPSHOT'
-//        classpath project(':build-gradle')
     }
 }
 
@@ -37,7 +34,7 @@ allprojects {
     repositories {
         jcenter()
         maven { url "https://www.jitpack.io" }
-        def REPOSITORY_URL = 'http://maven.aliyun.com/nexus/content/groups/public/'
+        
         all { ArtifactRepository repo ->
             if(repo instanceof MavenArtifactRepository){
                 def url = repo.url.toString()
