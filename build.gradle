@@ -54,6 +54,10 @@ allprojects {
             url uri('D:/repos')
         }
 
+		maven{
+		   url "add new address"
+		}
+		
     }
 }
 
